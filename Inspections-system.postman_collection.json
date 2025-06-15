@@ -1,0 +1,1311 @@
+{
+	"info": {
+		"_postman_id": "a69885b1-a9fa-4d79-831b-1c6014826905",
+		"name": "Inspections-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41571676",
+		"_collection_link": "https://martian-eclipse-408843.postman.co/workspace/Team-Workspace~80273080-73aa-4720-895b-4fd554b94f47/collection/41571676-a69885b1-a9fa-4d79-831b-1c6014826905?action=share&source=collection_link&creator=41571676"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bernie41@example.net\", \r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|doBRhghLjtDvSGsSfp0ZmR5lzbR7lD7ntna3gOJm2505d14e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/logout",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\" : \"admin@testt.com\", \r\n    \"password\" : \"password\",\r\n    \"password_confirmation\" : \"password\",\r\n    \"phone\" : \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenanttwo.localhost:8000/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"tenanttwo",
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get-users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "23|CLSnDGV0yMbBjfyiFFHDW2j73cUxoPGyIQ0mn4rXedc3b411",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|I5dwF7i3tbk8kNdqHHER7eYV7Q1K7R96PpbJF0FKad64e633",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"sasdasdadtest\",\r\n    \"email\" : \"admin@tesstsssst.com\", \r\n    \"password\" : \"password\",\r\n    \"phone\" : \"01234556789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|I5dwF7i3tbk8kNdqHHER7eYV7Q1K7R96PpbJF0FKad64e633",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test-update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/users/73",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|I5dwF7i3tbk8kNdqHHER7eYV7Q1K7R96PpbJF0FKad64e633",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test-update\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/users/73",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|I5dwF7i3tbk8kNdqHHER7eYV7Q1K7R96PpbJF0FKad64e633",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test-update\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/users/73",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"73"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tenants",
+			"item": []
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "get-all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|OkhBC3UG7AOiI2BeIE5JnzTXelMnQuOBGLPGbQD61acada10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "24|rG8abfQ1hY1O9EJzsLjZckR9zboZlABwq1xJS1nid3644f5f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"testtwothsssree\",\r\n    \"description\" : \"tessst\",\r\n    \"is_active\" :  0\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "24|rG8abfQ1hY1O9EJzsLjZckR9zboZlABwq1xJS1nid3644f5f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"tttt\",\r\n    \"description\" : \"ssss\",\r\n    \"max_concurrent_bookings\" : \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/3",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "26|TfHGDRWlVNAQENMaSt6yrnoMVUkzWZs1eYTkeBGx043c5319",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenanttwo.localhost:8000/api/v1/teams/1",
+							"protocol": "http",
+							"host": [
+								"tenanttwo",
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "24|rG8abfQ1hY1O9EJzsLjZckR9zboZlABwq1xJS1nid3644f5f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/3",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-active-teams",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "24|rG8abfQ1hY1O9EJzsLjZckR9zboZlABwq1xJS1nid3644f5f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/active",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"active"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TeamMembers",
+			"item": [
+				{
+					"name": "get-members-by-team",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|OkhBC3UG7AOiI2BeIE5JnzTXelMnQuOBGLPGbQD61acada10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/members",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-members",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|OkhBC3UG7AOiI2BeIE5JnzTXelMnQuOBGLPGbQD61acada10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_ids\": [ 3,4,5] \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/members/sync",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"members",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team Availability",
+			"item": [
+				{
+					"name": "get-all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bernie41@example.net\", \r\n    \"password\" : \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/availability",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bernie41@example.net\", \r\n    \"password\" : \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/availability/active",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"availability",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-availability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"team_id\": 1,\r\n    \"day_of_week\": 3,\r\n    \"start_time\": \"09:00\",\r\n    \"end_time\": \"17:00\",\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/team-availability",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"team-availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-availability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_time\": \"08:00\",\r\n    \"end_time\": \"16:00\",\r\n    \"is_active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/team-availability/1",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"team-availability",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-team-availability-for-specific-day",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bernie41@example.net\", \r\n    \"password\" : \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/availability/day/3",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"availability",
+								"day",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bernie41@example.net\", \r\n    \"password\" : \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/team-availability/3",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"team-availability",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sync-team-availability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"availability\": [\r\n        {\r\n            \"day_of_week\": 1,\r\n            \"start_time\": \"09:00\",\r\n            \"end_time\": \"12:00\",\r\n            \"is_active\": true\r\n        },\r\n        {\r\n            \"day_of_week\": 1,\r\n            \"start_time\": \"13:00\",\r\n            \"end_time\": \"17:00\",\r\n            \"is_active\": true\r\n        },\r\n        {\r\n            \"day_of_week\": 2,\r\n            \"start_time\": \"09:00\",\r\n            \"end_time\": \"17:00\",\r\n            \"is_active\": true\r\n        },\r\n        {\r\n            \"day_of_week\": 3,\r\n            \"start_time\": \"09:00\",\r\n            \"end_time\": \"17:00\",\r\n            \"is_active\": true\r\n        },\r\n        {\r\n            \"day_of_week\": 4,\r\n            \"start_time\": \"09:00\",\r\n            \"end_time\": \"17:00\",\r\n            \"is_active\": true\r\n        },\r\n        {\r\n            \"day_of_week\": 5,\r\n            \"start_time\": \"09:00\",\r\n            \"end_time\": \"15:00\",\r\n            \"is_active\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/availability/sync",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"availability",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "get-all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"team_id\": 1,\r\n    \"booking_date\": \"2025-06-16\",\r\n    \"start_time\": \"13:00\",\r\n    \"end_time\": \"14:00\",\r\n    \"customer_name\": \"John Doe\",\r\n    \"customer_email\": \"john.doe@example.com\",\r\n    \"customer_phone\": \"+1234567890\",\r\n    \"location\": \"123 Main Street, Downtown\",\r\n    \"notes\": \"Please bring inspection equipment for kitchen area\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate-dynamic-slots",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/teams/1/generate-slots?from=2025-06-16&to=2025-06-22",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"1",
+								"generate-slots"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-06-16"
+								},
+								{
+									"key": "to",
+									"value": "2025-06-22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|cTP0cooylilzeJM1VJyPpa5QkhfPGhvxcN6BBT2X2ebaa2ab",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://tenantone.com:8000/api/v1/bookings/1",
+							"protocol": "http",
+							"host": [
+								"tenantone",
+								"com"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

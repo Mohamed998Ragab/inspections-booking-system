@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/teamavailability",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\TeamAvailability\\": "",
+            "Modules\\TeamAvailability\\Database\\Factories\\": "database/factories/",
+            "Modules\\TeamAvailability\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\TeamAvailability\\Tests\\": "tests/"
+        }
+    }
+}

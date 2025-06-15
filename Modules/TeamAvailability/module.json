@@ -1,0 +1,11 @@
+{
+    "name": "TeamAvailability",
+    "alias": "teamavailability",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TeamAvailability\\App\\Providers\\TeamAvailabilityServiceProvider"
+    ],
+    "files": []
+}
